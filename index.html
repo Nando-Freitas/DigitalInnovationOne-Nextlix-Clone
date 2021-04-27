@@ -5,19 +5,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- owl css -->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
+    <!-- responsive rules -->
+    <link rel="stylesheet" href="style/responsive.css">
 </head>
-<body>
+<body onload="ocultar()">
     <header>
+        <!--div wrapper-->
         <div class="container">
-                <h2>Netflix</h2>
+                <h2 class="logo">CartoonFlix</h2>
                 <nav>
                     <a href="#">Início</a>
                     <a href="#">Séries</a>
                     <a href="#">Filmes</a>
-                    <a href="#">Documentários</a>
                 </nav>
-
         </div>
     </header>
+
+    <!-- main content -->
+    <main>
+        <!--div wrapper-->
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">OS INCRÍVEIS</h3>
+                <p class="descricao">Apesar de feliz com a vida doméstica, o Sr. Incrível ainda sente falta dos tempos em que viveu como super-herói, e sua grande chance de entrar em ação novamente surge quando um velho inimigo volta a atacar. Só que agora ele terá que contar com a ajuda de toda a família para vencer o vilão!</p>
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        ASSITIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Disney-->
+    <h3 class="titulo-produtora">Disney: Incluído no CartoonFlix</h3>
+
+    <div class="carousel-filmes">
+        <div class="owl-carousel ow-theme">
+            <div class="item">
+                <img id="dory" class="box-filme" onclick="mostrar(this)" src="img/dory.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="aladin" class="box-filme" onclick="mostrar(this)" src="img/aladin.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="ralph" class="box-filme" onclick="mostrar(this)" src="img/ralph.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="frozen" class="box-filme" onclick="mostrar(this)" src="img/frozen.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="cars" class="box-filme" onclick="mostrar(this)" src="img/cars.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="lion-king" class="box-filme" onclick="mostrar(this)" src="img/lion-king.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="toy-story" class="box-filme" onclick="mostrar(this)" src="img/toy-story.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="hercules" class="box-filme" onclick="mostrar(this)" src="img/hercules.jpg" alt="" >
+            </div>
+            <div class="item">
+                <img id="mulan" class="box-filme" onclick="mostrar(this)" src="img/mulan.jpg" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <div id="filme-descricao">
+            <button class="fecha-descricao"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- hanna barbera -->
+
+    <h3 class="titulo-produtora">Hanna Barbera: Incluído no CartoonFlix</h3>
+
+    <div class="carousel-filmes">
+        <div class="owl-carousel ow-theme">
+            <div class="item">
+                <img id="flintstones" class="box-filme" src="img/flintstones.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="jetsons" class="box-filme" src="img/jetsons.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="scooby" class="box-filme" src="img/scooby.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="jonny" class="box-filme" src="img/jonny-quest.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="colmeia" class="box-filme" src="img/ze-colmeia.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="shazzan" class="box-filme" src="img/Shazzan.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="loopy" class="box-filme" src="img/loopy-de-loop.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="potamus" class="box-filme" src="img/peter-potamus.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+            <div class="item">
+                <img id="manda" class="box-filme" src="img/manda-chuva.jpg" alt="" onclick="mostrarHanna(this)">
+            </div>
+        </div>
+    </div>
+
+    <div id="filme-descricaoHanna">
+
+    </div>
+
+    <!-- Nickelodeon -->
+
+    <h3 class="titulo-produtora">Nickelodeon</h3>
+
+    <div class="carousel-filmes">
+        <div class="owl-carousel ow-theme">
+            <div class="item">
+                <img id="ginger" class="box-filme" src="img/ginger.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="neutron" class="box-filme" src="img/jimmy neutron.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="rugrats" class="box-filme" src="img/rugrats.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="rocket" class="box-filme" src="img/rocket-power.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="pirados" class="box-filme" src="img/os-castores-pirados.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="rocko" class="box-filme" src="img/a-vida-moderna-de-rocko.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="bob" class="box-filme" src="img/bob-esponja.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="doug" class="box-filme" src="img/doug.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+            <div class="item">
+                <img id="catdog" class="box-filme" src="img/catdog.jpg" alt="" onclick="mostrarNick(this)">
+            </div>
+        </div>
+    </div>
+
+    <div id="filme-descricaoNick">
+
+    </div>
+
+    <!-- Cartoon Network -->
+
+    <h3 class="titulo-produtora">Cartoon Network</h3>
+
+    <div class="carousel-filmes">
+        <div class="owl-carousel ow-theme">
+            <div class="item">
+                <img id="steven" class="box-filme" src="img/steven-universon.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+            <div class="item">
+                <img id="knd" class="box-filme" src="img/knd.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+            <div class="item">
+                <img id="dexter" class="box-filme" src="img/dexter.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+            <div class="item">
+                <img id="bravo" class="box-filme" src="img/bravo.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+            <div class="item">
+                <img id="poderosas" class="box-filme" src="img/super-poderosas.jpg" alt="" onclick="mostrarCartoon(this)" >
+            </div>
+            <div class="item">
+                <img id="vacafrango" class="box-filme" src="img/vaca-frango.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+            <div class="item">
+                <img id="foster" class="box-filme" src="img/mansao-foster.jpg" alt="" onclick="mostrarCartoon(this)" >
+            </div>
+            <div class="item">
+                <img id="billymandy" class="box-filme" src="img/billy-mandy.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+            <div class="item">
+                <img id="ben10" class="box-filme" src="img/ben-10.jpg" alt="" onclick="mostrarCartoon(this)">
+            </div>
+        </div>
+    </div>
+
+    <div id="filme-descricaoCartoon">
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <h3>Todos os direitos reservados &copy 2021</h3>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/417c321ea3.js"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/setup.js"></script>
 </body>
 </html>
