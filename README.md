@@ -2,7 +2,7 @@
 
 <hr>
 
-<img src="screen.jpg" alt="CartoonFlix FrontPage"/>
+<img src="screen.png" alt="CartoonFlix FrontPage"/>
 
 ### Descrição
 <hr>
